@@ -1,0 +1,110 @@
+{
+  "loading": "Memuat...",
+  "actions": "Aksi",
+  "success": "berhasil",
+  "failed": "gagal",
+  "delete-title": "Apakah kamu yakin?",
+  "delete-text": "Anda akan menghapus data ini.",
+  "delete-text-permanent": "Anda tidak akan dapat mengembalikan ini!",
+  "delete-success": "Data berhasil dihapus.",
+  "delete-error": "Data sedang digunakan.",
+  "delete-cancel": "Data anda aman :)",
+  "reset-text": "Anda akan mengatur ulang data ini.",
+  "reset-success": "Mengatur ulang data berhasil.",
+  "yes": "Ya",
+  "no": "Tidak",
+  "enabled": "Aktif",
+  "disabled": "@:no Aktif",
+  "required_field": "* Data wajib diisi.",
+  "change-profile-picture": "Ganti foto profil",
+  "avatar-hint": "File hanya boleh ( PNG | JPEG ) dan ukuran file harus kurang dari {size} MB!",
+  "avatar-limit-size": "Ukuran file harus kurang dari {size} MB!",
+  "errors-page": {
+    "title": "Oops!",
+    "messages": {
+      "403": "Sepertinya Anda berada di area terlarang. Kamu tidak memiliki akses ke halaman ini. Untunglah kita tahu jalan kembali.",
+      "404": "Halaman tidak ditemukan. Untunglah kita tahu jalan kembali."
+    }
+  },
+  "buttons": {
+    "back": "Kembali",
+    "close": "Tutup",
+    "login": "Masuk",
+    "logout": "Keluar",
+    "create": "Tambah",
+    "edit": "Ubah",
+    "delete": "Hapus",
+    "cancel": "Batal",
+    "save": "Simpan",
+    "delete-ok": "Ya, hapus itu!",
+    "select": "Pilih",
+    "filter": "Filter",
+    "search": "Cari",
+    "reset": "Reset",
+    "done": "Selesai"
+  },
+  "$vuetify": {
+    "badge": "Lencana",
+    "close": "Tutup",
+    "dataIterator": {
+      "noResultsText": "Tidak ditemukan catatan yang cocok",
+      "loadingText": "Memuat data..."
+    },
+    "dataTable": {
+      "itemsPerPageText": "Baris per halaman:",
+      "ariaLabel": {
+        "sortDescending": "Diurutkan kebawah.",
+        "sortAscending": "Diurutkan keatas.",
+        "sortNone": "Tidak diurutkan.",
+        "activateNone": "Aktifkan untuk menghapus penyortiran.",
+        "activateDescending": "Aktifkan untuk mengurutkan kebawah.",
+        "activateAscending": "Aktifkan untuk mengurutkan keatas."
+      },
+      "sortBy": "Urutkan berdasar"
+    },
+    "dataFooter": {
+      "itemsPerPageText": "Item per halaman:",
+      "itemsPerPageAll": "Semua",
+      "nextPage": "Halaman selanjutnya",
+      "prevPage": "Halaman sebelumnya",
+      "firstPage": "Halaman pertama",
+      "lastPage": "Halaman terakhir",
+      "pageText": "{0}-{1} dari {2}"
+    },
+    "datePicker": {
+      "itemsSelected": "{0} dipilih",
+      "nextMonthAriaLabel": "Bulan depan",
+      "nextYearAriaLabel": "Tahun depan",
+      "prevMonthAriaLabel": "Bulan sebelumnya",
+      "prevYearAriaLabel": "Tahun sebelumnya"
+    },
+    "noDataText": "Tidak ada data tersedia",
+    "carousel": {
+      "prev": "Visual sebelumnya",
+      "next": "Visual selanjutnya",
+      "ariaLabel": {
+        "delimiter": "Carousel slide {0} dari {1}"
+      }
+    },
+    "calendar": {
+      "moreEvents": "{0} lagi"
+    },
+    "fileInput": {
+      "counter": "{0} berkas",
+      "counterSize": "{0} berkas (dari total {1})"
+    },
+    "timePicker": {
+      "am": "AM",
+      "pm": "PM"
+    },
+    "pagination": {
+      "ariaLabel": {
+        "wrapper": "Navigasi Pagination",
+        "next": "Halaman selanjutnya",
+        "previous": "Halaman sebelumnya",
+        "page": "Buka halaman {0}",
+        "currentPage": "Halaman Saat Ini, Halaman {0}"
+      }
+    }
+  }
+}
