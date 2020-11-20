@@ -19,6 +19,8 @@ class HotspotController extends Controller
         $late = !request()->filled('late') ? 12 : (int) request('late');
         $confidence = !request()->filled('confidence') ? [] : request('confidence');
 	$date = !request()->filled('date') ? [] : request('date');
+	$from = !request()->filled('from') ? [] : request('from');
+	$to   = !request()->filled('to') ? [] : request('to');
 
         $query2 = HotspotSatelit::query();
         $query2->where('hotspot_satelit.publikasi', true);
@@ -37,10 +39,14 @@ class HotspotController extends Controller
                 DB::raw("ST_Y(ST_Centroid(ST_Union(geom))) as lat"),
                 DB::raw("ST_X(ST_Centroid(ST_Union(geom))) as long")
             ]);
-	    if ($date == [])
+	    if ($from == [])
                     $query1->where('hotspot_satelit.date_hotspot', '>=', $formDate);
-            else
-                    $query1->whereDate('hotspot_satelit.date_hotspot', $date);
+            else {
+            	if($from != [])
+            		$query1->whereDate('hotspot_satelit.date_hotspot','>=', $from);
+            	if($to != [])
+            		$query1->whereDate('hotspot_satelit.date_hotspot','<=', $to);
+            }
             $query1->where('hotspot_satelit.publikasi', true);
             $query1->where('hotspot_satelit.source', 'lapan');
             $query1->whereIn('hotspot_satelit.confidence_level', $confidence);
@@ -63,11 +69,14 @@ class HotspotController extends Controller
                     $q->select(['id', 'nama_provinsi', 'pulau']);
                 }
             ]);
-            
-	    if ($date == [])
+	    if ($from == [])
                     $query->where('hotspot_satelit.date_hotspot', '>=', $formDate);
-            else
-                    $query->whereDate('hotspot_satelit.date_hotspot', $date);
+            else {
+            	if($from != [])
+            		$query->whereDate('hotspot_satelit.date_hotspot','>=', $from);
+            	if($to != [])
+            		$query->whereDate('hotspot_satelit.date_hotspot','<=', $to);
+            }        
             $query->where('hotspot_satelit.publikasi', true);
             $query->where('hotspot_satelit.source', 'lapan');
             $query->whereIn('hotspot_satelit.confidence_level', $confidence);
