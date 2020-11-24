@@ -19,6 +19,7 @@ class ListResource extends JsonResource
             'id'            => (string) $this->id,
             'title'          => $this->title,
             'image_url'          => $this->image_url,
+	    'publish'          => (bool) $this->publish,
             'created_at'          => $this->created_at->format('Y-m-d H:i:s'),
         ];
     }

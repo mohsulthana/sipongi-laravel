@@ -18,7 +18,8 @@ class Tematic extends Model
     protected $fillable = [
         'id',
         'title',
-        'image'
+        'image',
+	'publish',
     ];
 
     protected $dates = ['deleted_at'];

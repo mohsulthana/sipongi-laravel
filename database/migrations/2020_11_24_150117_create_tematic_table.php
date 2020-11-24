@@ -17,6 +17,7 @@ class CreateTematicTable extends Migration
             $table->uuid('id')->primary();
             $table->string('title')->nullable();
             $table->string('image')->nullable();
+	    $table->boolean('publish')->default(true);
             $table->timestamps();
             $table->softDeletes();
         });
