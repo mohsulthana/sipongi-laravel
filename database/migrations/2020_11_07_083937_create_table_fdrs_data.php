@@ -12,7 +12,7 @@ class CreateTableFdrsData extends Migration
      * @return void
      */
     public function up()
-    {
+    {	if(!Schema::hasTable('fdrs_data'))
         Schema::create('fdrs_data', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('fdrs_option_wilayah_key','250');

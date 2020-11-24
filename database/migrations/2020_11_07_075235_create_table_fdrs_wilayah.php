@@ -12,7 +12,7 @@ class CreateTableFdrsWilayah extends Migration
      * @return void
      */
     public function up()
-    {
+    {	if(!Schema::hasTable('fdrs_option_wilayah'))
         Schema::create('fdrs_option_wilayah', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('key','250');

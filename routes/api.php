@@ -271,6 +271,7 @@ Route::group([
     Route::get('data/disclaimer','DisclaimerController@getDataApi');
     Route::get('data/running-text','RunningTextController@getDataApi');
     Route::get('data/laporan-harian','LaporanHarianController@getDataApi');
+    Route::get('data/tematic', 'TematicController@getDataApi');
     Route::get('data/direktorat-pkhl','DirektoratPKHLController@getDataApi');
     Route::get('data/struktur-organisasi','StrukturOrganisasiController@getDataApi');
     Route::get('data/luas-kebakaran','LuasKebakaranTahunanController@getDataApi');

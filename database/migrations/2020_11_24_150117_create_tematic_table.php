@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTableEmisiCo2Tahunan extends Migration
+class CreateTematicTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,11 @@ class CreateTableEmisiCo2Tahunan extends Migration
      * @return void
      */
     public function up()
-    {	if(!Schema::hasTable('emisi_co2_tahunan'))
-        Schema::create('emisi_co2_tahunan', function (Blueprint $table) {
+    {
+        Schema::create('tematic', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->char('provinsi_id', 2)->nullable();
-            $table->integer('tahun')->nullable();
-            $table->double('total')->nullable();
+            $table->string('title')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,6 +29,7 @@ class CreateTableEmisiCo2Tahunan extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('emisi_co2_tahunan');
+        Schema::dropIfExists('tematic');
     }
 }
+

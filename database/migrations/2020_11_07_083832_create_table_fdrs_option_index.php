@@ -12,7 +12,7 @@ class CreateTableFdrsOptionIndex extends Migration
      * @return void
      */
     public function up()
-    {
+    {	if(!Schema::hasTable('fdrs_option_index'))
         Schema::create('fdrs_option_index', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('key','250');

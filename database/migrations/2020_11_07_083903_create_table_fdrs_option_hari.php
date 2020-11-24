@@ -12,7 +12,7 @@ class CreateTableFdrsOptionHari extends Migration
      * @return void
      */
     public function up()
-    {
+    {	if(!Schema::hasTable('fdrs_option_hari'))
         Schema::create('fdrs_option_hari', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('key','250');
