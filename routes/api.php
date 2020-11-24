@@ -142,7 +142,16 @@ Route::group([
         Route::post('satelit/delete', 'SatelitController@destroy');
     });
 	
-	// Running text
+    // Tematic
+    Route::group(['prefix' => 'tematic'], function () {
+ 	Route::get('/', 'TematicController@getDt');
+        Route::post('/', 'TematicController@store');
+        Route::get('/{id}/edit', 'TematicController@edit');
+        Route::post('/{id}/update', 'TematicController@update');
+        Route::post('/delete', 'TematicController@destroy');
+    });
+
+    // Running text
     Route::group(['prefix' => 'running-text'], function () {
         Route::get('/', 'RunningTextController@index');
         Route::post('/', 'RunningTextController@store');
