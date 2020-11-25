@@ -6,6 +6,8 @@ use App\Exceptions\Handler as Exception;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Tematic\ListResources;
 use App\Http\Resources\Tematic\ListResource;
+use App\Http\Resources\Tematic\ApiListResource;
+use App\Http\Resources\Tematic\ApiListResources;
 use App\Models\Tematic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -167,10 +169,9 @@ class TematicController extends Controller
 
     public function getDataApi()
     {
-        $data = Tematic::query()
-            ->get();
-        
-        return $data;
+        $data = Tematic::query()->get();
+         
+        return new ApiListResources($data);
     }
 }
 
