@@ -169,7 +169,7 @@ class TematicController extends Controller
 
     public function getDataApi()
     {
-        $data = Tematic::query()->get();
+        $data = Tematic::query()->where('publish', true)->get();
          
         return new ApiListResources($data);
     }
