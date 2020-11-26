@@ -1,0 +1,8 @@
+import './config'
+import './moment'
+import './axios'
+import './sweetalert2'
+import './VueProgressBar'
+import './vue-currency-input'
+import './tinyMce'
+import './v-clipboard'

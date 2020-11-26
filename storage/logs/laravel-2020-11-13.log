@@ -1,0 +1,43 @@
+[2020-11-13 19:17:58] production.ERROR: Command "migration" is not defined.
+
+Did you mean one of these?
+    make:migration
+    migrasi:data-lama
+    migrate
+    migrate:fresh
+    migrate:install
+    migrate:refresh
+    migrate:reset
+    migrate:rollback
+    migrate:status {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"migration\" is not defined.
+
+Did you mean one of these?
+    make:migration
+    migrasi:data-lama
+    migrate
+    migrate:fresh
+    migrate:install
+    migrate:refresh
+    migrate:reset
+    migrate:rollback
+    migrate:status at /var/www/html/sipongiplus/sipongi-dev/vendor/symfony/console/Application.php:676)
+[stacktrace]
+#0 /var/www/html/sipongiplus/sipongi-dev/vendor/symfony/console/Application.php(237): Symfony\\Component\\Console\\Application->find()
+#1 /var/www/html/sipongiplus/sipongi-dev/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun()
+#2 /var/www/html/sipongiplus/sipongi-dev/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run()
+#3 /var/www/html/sipongiplus/sipongi-dev/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run()
+#4 /var/www/html/sipongiplus/sipongi-dev/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#5 {main}
+"} 
+[2020-11-13 19:18:06] production.ERROR: Not enough arguments (missing: "name"). {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): Not enough arguments (missing: \"name\"). at /var/www/html/sipongiplus/sipongi-dev/vendor/symfony/console/Input/Input.php:76)
+[stacktrace]
+#0 /var/www/html/sipongiplus/sipongi-dev/vendor/symfony/console/Command/Command.php(250): Symfony\\Component\\Console\\Input\\Input->validate()
+#1 /var/www/html/sipongiplus/sipongi-dev/vendor/laravel/framework/src/Illuminate/Console/Command.php(121): Symfony\\Component\\Console\\Command\\Command->run()
+#2 /var/www/html/sipongiplus/sipongi-dev/vendor/symfony/console/Application.php(1009): Illuminate\\Console\\Command->run()
+#3 /var/www/html/sipongiplus/sipongi-dev/vendor/symfony/console/Application.php(273): Symfony\\Component\\Console\\Application->doRunCommand()
+#4 /var/www/html/sipongiplus/sipongi-dev/vendor/symfony/console/Application.php(149): Symfony\\Component\\Console\\Application->doRun()
+#5 /var/www/html/sipongiplus/sipongi-dev/vendor/laravel/framework/src/Illuminate/Console/Application.php(93): Symfony\\Component\\Console\\Application->run()
+#6 /var/www/html/sipongiplus/sipongi-dev/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(131): Illuminate\\Console\\Application->run()
+#7 /var/www/html/sipongiplus/sipongi-dev/artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle()
+#8 {main}
+"} 
